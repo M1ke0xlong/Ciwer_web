@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --navbar-color: #016579 ;
+    --background-color:    #3e3e3e ;
+    --footer-color: #7e9ea5;
+    --text-color: #ffffff;
+    --button-color: #004b5a ;
+
+}
+html {
+    font-family: 'Raleway', sans-serif;
+}
+/*@media only screen and (max-width: 600px) { */
+    body {
+      background-color: var(--background-color);
+      margin: 0px;
+      padding: 0px;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: var(--navbar-color);
+        padding-left: 1rem;
+    }
+    menu {
+        display: flex;
+        list-style: none;
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+    menu li {
+        padding: 0px;
+        margin: 0rem 0.2rem 0rem 0.2rem;
+
+    }
+    menu li a{
+        text-align: center;
+        padding: 0.5rem;
+        text-decoration: none;
+        color: var(--text-color);
+        background-color: var(--button-color);
+        border-radius: 15px;
+    }
+    menu li a:hover{
+        padding: 0.5rem;
+
+        color: var(--navbar-color);
+        background-color: var(--text-color);
+    }
+    footer {
+        background-color: var(--footer-color);
+        width: 100%;
+        text-align: center;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        color: var(--navbar-color);
+    }
+  /*}*/
