@@ -5,10 +5,13 @@
     --footer-color: #7e9ea5;
     --text-color: #ffffff;
     --button-color: #004b5a ;
-
+    --primary-btn-color: #002e37;
 }
 html {
     font-family: 'Raleway', sans-serif;
+}
+.display-none {
+    display: none;
 }
 /*@media only screen and (max-width: 600px) { */
     body {
@@ -49,11 +52,38 @@ html {
         background-color: var(--text-color);
     }
     footer {
-        background-color: var(--footer-color);
+        background-color: var(--navbar-color);
         width: 100%;
         text-align: center;
         padding-top: 0.2rem;
         padding-bottom: 0.2rem;
-        color: var(--navbar-color);
+        color: var(--text-color);
+    }
+    h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-color);
+        font-size: 4rem;
+        text-align: center;
+        height: 15rem;
+        width: 100%;
+        background-color: rgba(20, 20, 20, 0.5);
+    }
+    h1 span {
+        display: block;
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    .primary-btn {
+        background-color: var(--primary-btn-color);
+    }
+    .main_page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        background-image: url(../media/output_2053466611_0_out.jpg);
+        background-size:cover;
     }
   /*}*/
