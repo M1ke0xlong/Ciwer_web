@@ -17,6 +17,7 @@ html {
     display: none;
 }
 h2,h3 {
+    padding: 1rem;
     color: var(--h2-color);
 }
 .img-responsive {
@@ -28,14 +29,23 @@ h2,h3 {
       background-color: var(--background-color);
       margin: 0px;
       padding: 0px;
+      position: relative;
+    }
+    header {
+        position: fixed;
+        top:0;
+        width: 100%;
     }
     nav {
+        position: sticky;
+        z-index: 1;
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
         background-color: var(--navbar-color);
-        padding-left: 1rem;
         padding: 0.5rem;
+        padding-left: 1rem;
     }
     menu {
         display: flex;
@@ -141,6 +151,8 @@ h2,h3 {
         text-align: center;
         transition: transform 0.3s;
         transform: scale(100%);
+        margin: 1rem;
+
     }
     .center_btn:hover {
         transition: transform 0.3s;
@@ -155,16 +167,20 @@ h2,h3 {
     .reference p{
         text-align: center;
         font-weight: 500;
-        font-size: 2rem;
+        font-size: 1.5rem;
         background-color: var(--footer-color);
         padding: 1rem;
     }
     .kontakt_text{
         text-align: center;
         font-weight: 500;
-        font-size: 2rem;
+        font-size: 1.5rem;
         background-color: var(--footer-color);
         padding: 1rem;
+    }
+    .kontakt_text a,p{
+        padding: 0rem;
+        margin: 0rem;
     }
     .formular {
         width: 80%;

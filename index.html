@@ -6,19 +6,30 @@
     <link rel="stylesheet" href="./css/styles.css">
     <title>Ciwer</title>
 </head>
+<script>
+    function smoothScroll(target) {
+        const targetElement = document.querySelector(target);
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+        
+        window.scrollTo({
+            top: targetPosition - 5 * parseFloat(getComputedStyle(document.documentElement).fontSize),
+            behavior: 'smooth'
+        });
+    }
+</script>
 <body>
     <header>
         <nav>
             <img src="/" alt="Logo společnosti Ciwer">
             <menu>
-                <li><a href="">Domů</a></li>
-                <li><a href="#sluzby">Služby</a></li>
-                <li><a href="#">Reference</a></li>
+                <li><a onclick="smoothScroll('#top')">Domů</a></li>
+                <li><a onclick="smoothScroll('#sluzby')">Služby</a></li>
+                <li><a onclick="smoothScroll('#reference')">Reference</a></li>
                 <li><a href="./pages/contacts.html" class="primary-btn">Kontakty</a></li>
             </menu>
         </nav>
     </header>
-    <div class="main_page">
+    <div class="main_page" id="top">
         <h1>Ciwer<span class="display-none"> - </span><span>IT služby na míru</span></h1>
     </div>
     <div id="sluzby" class="sluzby">
