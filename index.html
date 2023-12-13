@@ -25,6 +25,10 @@
             behavior: 'smooth'
         });
     }
+    function toggleMenu() {
+        const menu = document.querySelector('menu');
+        menu.classList.toggle('show');
+    }
 </script>
 <body>
     <header>
@@ -36,6 +40,7 @@
                 <li><a onclick="smoothScroll('#reference')">Reference</a></li>
                 <li><a href="./pages/contacts.html" class="primary-btn">Kontakty</a></li>
             </menu>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
         </nav>
     </header>
     <div class="main_page" id="top">
