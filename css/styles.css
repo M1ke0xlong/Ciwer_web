@@ -303,6 +303,7 @@ label {
         margin: 0px;
         padding: 0px;
         position: relative;
+        padding-top: 4rem;
       }
       header {
           position: fixed;
@@ -319,7 +320,7 @@ label {
           background-color: var(--navbar-color);
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
-        
+          height: 4rem;
       }
       menu {
         display: none;
