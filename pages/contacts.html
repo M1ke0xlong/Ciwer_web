@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>Ciwer | Kontakty</title>
+    <title>Ciwer</title>
 </head>
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Check if there is a hash in the URL
+        const hash = window.location.hash;
+        if (hash) {
+            // Smooth scroll to the element with the given hash
+            smoothScroll(hash);
+        }
+    });
 
     function smoothScroll(target) {
         const targetElement = document.querySelector(target);
@@ -17,22 +25,35 @@
             behavior: 'smooth'
         });
     }
+    function openDefaultEmailClient() {
+        window.location.href = "mailto:roman.hozak.021@pslib.cz";
+    }
+
+    function openDefaultPhoneDialer() {
+        window.location.href = "tel:+420705339598";
+    }
 </script>
 <body>
     <header>
         <nav>
             <img src="/" alt="Logo společnosti Ciwer">
-            <menu>
-                <li><a href="../index.html">Domů</a></li>
-                <li><a href="../index.html#sluzby">Služby</a></li>
-                <li><a href="../index.html#reference">Reference</a></li>
-                <li><a href="#" class="primary-btn">Kontakty</a></li>
+            <menu class="domu">
+                <li><a class="primary-btn" href="../index.html">Domů</a></li>
             </menu>
         </nav>
     </header>
-    <div>
-        <h1>Ciwer<span class="display-none"> - </span><span> Vše pro Vaši síť</span></h1>
+    <div class="main_page" id="top">
+        <h1>Kontakty<span class="display-none"> - </span><span>Ciwer</span></h1>
     </div>
-    <footer>Ciwer © 2023</footer>
+    <div class="osoby">
+        <div class="osoby_polozka">
+            <h2>Roman Hozák<span> majitel, vedoucí oddělení webů a skládání počítačů</span></h2>
+            <ul class="osoby_osobni-kontakty">
+                <li class="mail myInput" onclick="openDefaultEmailClient()">roman.hozak.021@pslib.cz</li>
+                <li class="tel myInput" onclick="openDefaultPhoneDialer()">+420 705 339 598</li>
+            </ul>
+        </div>
+    </div>
+    <footer>Ciwer 2023</footer>
 </body>
 </html>
