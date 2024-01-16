@@ -1,18 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
-    --navbar-color: #003c5f   ;
+    --navbar-color: #3D3B40   ;
     --background-color:    #ffffff ;
     --blank-background-color:    #3e3e3e ;
-    --footer-color: #7e9ea5;
+    --footer-color: #BFCFE7;
     --text-color: #ffffff;
-    --button-color: #002f4a ;
-    --primary-btn-color: #001737;
-    --h2-color: #002e37 ;
+    --button-color: #ffffff00 ;
+    --button-color-hover: #00000027 ;
+    --primary-btn-color: #ffffff;
+    --primary-btn-color-hover: #ededed;
+    --h2-color: #424769 ;
     --black: #000000;
-    --scroll-hover:#999999;
-    --scroll-color:#bebebe;
-    --scroll-background:#004b5f;
-    --scroll-border: #000000;
 }
 html {
     font-family: 'Raleway', sans-serif;
@@ -27,30 +25,6 @@ h2,h3 {
 .img-responsive {
     height: auto;
     width: 100%;
-}
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-    border: 2px solid black;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: var(--scroll-background);
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: var(--scroll-color);
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--scroll-hover);
-  }
-label {
-    padding-bottom: 0.25rem;
 }
 @media only screen and (min-width: 999px) { 
     .hamburger {
@@ -81,26 +55,37 @@ label {
     menu {
         display: flex;
         list-style: none;
+        justify-content: space-around;
         margin-left: auto;
         margin-right: 1rem;
     }
     menu li {
         padding: 0px;
-        margin: 0rem 0.5rem 0rem 0.5rem;
+        margin: 0rem 0.25rem 0rem 0.25rem;
+        width: 100%;
+        text-align: center;
+        z-index: 0;
+        width: 8rem;
 
     }
     menu li a{
         text-align: center;
-        padding: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
         text-decoration: none;
+        border: 0.1rem solid white;
+        border-radius: 50px;
         color: var(--text-color);
         background-color: var(--button-color);
-        border-radius: 15px;
+        z-index: 1;
     }
     menu li a:hover{
-
-        color: var(--navbar-color);
-        background-color: var(--text-color);
+        width: 100%;
+        color: var(--text-color);
+        background-color: var(--button-color-hover);
+        cursor: pointer;
     }
     footer {
         background-color: var(--navbar-color);
@@ -128,6 +113,14 @@ label {
     }
     .primary-btn {
         background-color: var(--primary-btn-color);
+        color: #000000;
+    }
+    .primary-btn:hover {
+        color: var(--black);
+        background-color: var(--primary-btn-color-hover);
+        border-color: var(--primary-btn-color-hover);
+        transition: transform 0.3s;
+        transform: scale(1.25);
     }
     .main_page {
         display: flex;
@@ -391,7 +384,7 @@ label {
         display: flex;
         flex-direction: column;
         position: absolute;
-        margin-top: 14.2rem;
+        margin-top: 14rem;
         width: 100%;
         padding: 0px;
         z-index: 1;
@@ -641,5 +634,8 @@ label {
     .osoby_osobni-kontakty li{
         margin-top: 0.2rem;
         margin-bottom: 0.2rem;
+    }
+    .formular {
+        margin-bottom: 1.5rem;
     }
 }
