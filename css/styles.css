@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
-    --navbar-color: #3D3B40   ;
+    --navbar-color: #003c5f   ;
     --background-color:    #ffffff ;
     --blank-background-color:    #3e3e3e ;
-    --footer-color: #BFCFE7;
+    --footer-color: #7e9ea5;
     --text-color: #ffffff;
-    --button-color: #ffffff00 ;
-    --button-color-hover: #00000027 ;
-    --primary-btn-color: #ffffff;
-    --primary-btn-color-hover: #ededed;
-    --h2-color: #424769 ;
+    --button-color: #002f4a ;
+    --primary-btn-color: #001737;
+    --h2-color: #002e37 ;
     --black: #000000;
+    --scroll-hover:#999999;
+    --scroll-color:#bebebe;
+    --scroll-background:#004b5f;
+    --scroll-border: #000000;
 }
 html {
     font-family: 'Raleway', sans-serif;
@@ -25,6 +27,9 @@ h2,h3 {
 .img-responsive {
     height: auto;
     width: 100%;
+}
+label {
+    padding-bottom: 0.25rem;
 }
 @media only screen and (min-width: 999px) { 
     .hamburger {
@@ -55,37 +60,26 @@ h2,h3 {
     menu {
         display: flex;
         list-style: none;
-        justify-content: space-around;
         margin-left: auto;
         margin-right: 1rem;
     }
     menu li {
         padding: 0px;
-        margin: 0rem 0.25rem 0rem 0.25rem;
-        width: 100%;
-        text-align: center;
-        z-index: 0;
-        width: 8rem;
+        margin: 0rem 0.5rem 0rem 0.5rem;
 
     }
     menu li a{
         text-align: center;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
+        padding: 1rem;
         text-decoration: none;
-        border: 0.1rem solid white;
-        border-radius: 50px;
         color: var(--text-color);
         background-color: var(--button-color);
-        z-index: 1;
+        border-radius: 15px;
     }
     menu li a:hover{
-        width: 100%;
-        color: var(--text-color);
-        background-color: var(--button-color-hover);
-        cursor: pointer;
+
+        color: var(--navbar-color);
+        background-color: var(--text-color);
     }
     footer {
         background-color: var(--navbar-color);
@@ -113,14 +107,6 @@ h2,h3 {
     }
     .primary-btn {
         background-color: var(--primary-btn-color);
-        color: #000000;
-    }
-    .primary-btn:hover {
-        color: var(--black);
-        background-color: var(--primary-btn-color-hover);
-        border-color: var(--primary-btn-color-hover);
-        transition: transform 0.3s;
-        transform: scale(1.25);
     }
     .main_page {
         display: flex;
@@ -152,7 +138,6 @@ h2,h3 {
     .sluzby-item_popis.reverse {
         grid-column:1;
         grid-row: 1;
-
     }
     .sluzby-item:not(.sluzby-item:last-child) {
         margin-bottom: 3rem;
@@ -241,7 +226,6 @@ h2,h3 {
         grid-row: 2;
         justify-self: center;
         align-self: center;
-
     }
     .kontakt_zprava {
         grid-column: 2;
@@ -384,7 +368,7 @@ h2,h3 {
         display: flex;
         flex-direction: column;
         position: absolute;
-        margin-top: 14rem;
+        margin-top: 14.2rem;
         width: 100%;
         padding: 0px;
         z-index: 1;
@@ -393,7 +377,6 @@ h2,h3 {
       menu.show li {
         margin: 0px;
         background-color: var(--button-color);
-
       }
       menu.show li a{
         display: flex;
@@ -434,7 +417,6 @@ h2,h3 {
           justify-content: center;
           align-items: center;
           background-image: url(../media/output_2053466611_0_out.jpg);
-
       }
       h2 {
           text-align: center;
@@ -446,7 +428,6 @@ h2,h3 {
         padding: 0.5rem;
         display: flex;
         flex-direction: column;
-
       }
       .sluzby-item:not(.sluzby-item:last-child) {
           margin-bottom: 1rem;
@@ -543,7 +524,6 @@ h2,h3 {
         justify-content: center;
         margin-bottom: 1rem;
       }
-
       #zprava {
         border: 2px solid var(--button-color);     
         font-size: 1rem;
@@ -634,8 +614,5 @@ h2,h3 {
     .osoby_osobni-kontakty li{
         margin-top: 0.2rem;
         margin-bottom: 0.2rem;
-    }
-    .formular {
-        margin-bottom: 1.5rem;
     }
 }
